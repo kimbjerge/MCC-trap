@@ -1,4 +1,4 @@
-# MCC-trap
+# Moths Classification and Counting (MCC) algorithm for the light trap and computer vision system to detect and classify live moths
 ## What is this repository for? ##
 
 This repository contains all the necessary code and documentation for the Moth-trap software.
