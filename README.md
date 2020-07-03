@@ -1,8 +1,10 @@
 # MCC-trap
 What is this repository for?
+
 This repository contains all the necessary code and documentation for the Moth-trap software. It contains instructions and code for both training and data-processing.
 
 How do I get set up?
+
 Dependencies
 The following dependencies must be installed.
 
