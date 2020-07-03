@@ -4,6 +4,10 @@
 This repository contains all the necessary code and documentation of the algorithm for the light trap and computer vision system to detect and classify live moths.
 It contains instructions and code for both training and data-processing.
 
+Paper:
+https://www.biorxiv.org/content/10.1101/2020.03.18.996447v1
+
+
 ## How do I get set up? ##
 #### Dependencies####
 The following dependencies must be installed.
