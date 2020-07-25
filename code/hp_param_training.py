@@ -39,11 +39,11 @@ print(sklearn.__version__)
 ##
 
 # Directory with subdirectories for each class with cropped images in jpg format
-#data_dir = '/home/don/moths/10classes_mixed'
-data_dir = 'H:/Natsvaermer/TrainingData2020/10classes_mixed'
+data_dir = '../10classes_mixed'
 
 # Directory for saving tensorboard model parameters
 hparam_dir = '..\\hparam_tuning' # Windows path
+#hparam_dir = '../hparam_tuning' # Linux path
 
 # Directory for saving h5 models for each run
 models_dir = '../models_save'
@@ -282,6 +282,7 @@ for num_units in HP_NUM_UNITS.domain.values:
                         print('--- Starting trial: %s' % run_name)
                         print({h.name: hparams[h] for h in hparams})
                         run(hparam_dir + '\\' + run_name, hparams, session_num) # Windows path
+                        #run(hparam_dir + '/' + run_name, hparams, session_num) # Linux path
                         session_num += 1
                         
 #model.summary()
