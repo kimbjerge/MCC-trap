@@ -1,0 +1,69 @@
+{
+   "datareader": {
+      "datapath": "../data",
+      "maxim": -1
+   },
+
+   "classifier":{
+	   "type": "cnn",
+	   "modeltype" : "../config/default128",
+      "species": ["agrotis_puta", "amphipyra_pyramidea", "autographa_gamma", "caradrinina", "mythimna_pallens",
+		            "noctua_fimbriata", "noctua_pronuba", "xestia_c-nigrum", "vespula_vulgais", "background"],
+      "imagedimension": 128,
+	   "threshold_unknown": 60,
+	   "unknown_dir": "../unknowns",
+      "write_unknown" : false,
+      "boundingboxpadding": 100
+   },
+
+   "blobdetector":{
+      "type": "adaptive",
+      "adapthres": false,
+      "adaptive": {
+         "medianblur": 5,
+         "adapsize": 801,
+         "adapconst": 8,
+         "kernel": 20
+      },
+      "simple": {
+         "kernel": 7,
+         "thresh": 192
+      },
+    	"otsu": {
+    	   "blur_kernel": 3,
+    	   "blur": 7,
+    	   "morph_kernel": 11
+      }, 
+      "custom": {
+         "kernel": 7,
+         "thresh": 5
+      },           
+      "minarea": 12000,
+      "maxarea": 250000,
+      "backgroundpath": "../config/sample_background.jpg"
+   },
+
+   "imagemod":{
+   },
+
+   "tracker":{
+      "distance_cost_weight": 1.3,
+      "area_cost_weight": 0.7,
+      "cost_threshold": 0.6,
+	   "maxage": 5,
+	   "_comment": 50 
+   },
+
+   "moviemaker":{
+      "maxframes": -1,
+      "maximages": -1,
+      "resultdir": "../results",
+      "writeimages": false,
+      "writemovie": true,
+      "moviesize": false,
+      "fps":5
+   },
+   
+   "stats":{
+   }
+}
