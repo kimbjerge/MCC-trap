@@ -69,7 +69,7 @@ class IdacRunner(QThread):
             self.statsignal.emit(stat.count)
 
             # Write frame
-            mm.writeframe(image)
+            mm.writeframe(image, file)
             time2 = time.time()
             print('function took {:.3f} ms'.format((time2 - time1) * 1000.0))
 

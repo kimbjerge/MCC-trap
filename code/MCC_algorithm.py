@@ -101,7 +101,8 @@ if __name__ == '__main__':
 
     print('STARTING NOW. Please wait.....')
     #dirNames = ['3108_Brio', '0109_Brio', '0209_Brio']  # Sub directories in data folder - not included in github
-    dirNames = ['']
+    #dirNames = [''] # Use images in data directory
+    dirNames =['2608_data'] # Sub directory with some other sample images
     for dirName in dirNames:
         print(dirName)
         stat, resultdir = run(dirName)

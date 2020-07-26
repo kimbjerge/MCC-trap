@@ -70,7 +70,7 @@ class IdacMain(QMainWindow):
         self.progressBar.setValue(int((self.counter / self.total) * 100) + 2)
         self.label.setPixmap(QPixmap(event).scaled(self.label.width(), self.label.height(), QtCore.Qt.KeepAspectRatio))
         self.label.adjustSize()
-        self.statusBar().showMessage('RUNNING... Press C to cancel          Image: ' + str(self.counter) + ' OF '
+        self.statusBar().showMessage('RUNNING... Press C to terminate          Image: ' + str(self.counter) + ' OF '
                                      + str(self.total))
 
     def updateBinary(self, event):
