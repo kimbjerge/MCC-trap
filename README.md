@@ -9,7 +9,7 @@ https://www.biorxiv.org/content/10.1101/2020.03.18.996447v1
 
 
 ## How do I get set up? ##
-#### Dependencies####
+#### Dependencies ####
 The following dependencies must be installed.
 
 | Dependency   | Version  |
