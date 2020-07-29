@@ -14,16 +14,15 @@ The following dependencies must be installed.
 
 | Dependency   | Version  |
 |--------------|----------|
-| scikit_image | tbd	  |
-| numpy        | tbd      |
-| scipy        | tbd      |
-| Pympler      | tbd      |
-| tensorflow   | tbd      |
-| Pillow       | tbd      |
-| PyQt5        | tbd      |
-| OpenCV       | tbd      |
-| Seaborn      | tbd      |
-| Scikit learn | tbd      |
+| scikit_image | 0.16.2	  |
+| numpy        | 1.18.5   |
+| scipy        | 1.4.     |
+| Pympler      | 0.7      |
+| tensorflow   | 2.0.0    |
+| Pillow       | 7.0.0    |
+| pandas       | 1.0.4    |
+| Seaborn      | 0.10.1   |
+| Scikit learn | 0.19.1   |
 
 #### Using Anaconda: ####
 1. Install the dependencies and create the environment using the provided OS specific environment file with the command "conda create --name myEnv --file ENV_FILE.txt"
