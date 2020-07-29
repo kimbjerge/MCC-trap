@@ -1,7 +1,7 @@
 # Moths Classification and Counting (MCC) 
 ## What is this repository for? ##
 
-This repository contains all the necessary code and documentation of the algorithm for the light trap and computer vision system to detect and classify live moths.
+This repository contains all the necessary code and documentation of the algorithm for the light trap and computer vision system to detect, track and classify live moths.
 It contains instructions and code for both training and data-processing.
 
 Paper:
@@ -16,7 +16,7 @@ The following dependencies must be installed.
 |--------------|----------|
 | scikit_image | 0.16.2	  |
 | numpy        | 1.18.5   |
-| scipy        | 1.4.     |
+| scipy        | 1.4.1    |
 | Pympler      | 0.7      |
 | tensorflow   | 2.0.0    |
 | Pillow       | 7.0.0    |
@@ -26,6 +26,7 @@ The following dependencies must be installed.
 
 #### Using Anaconda: ####
 1. Install the dependencies and create the environment using the provided OS specific environment file with the command "conda create --name myEnv --file ENV_FILE.txt"
+   (See env file for Linux and Windows)
 2. Activate the enviorement using the command "activate myEnv"
 
 #### Start the program ####
@@ -38,8 +39,8 @@ Extract the 10classes_mixed.zip file that contains the training and validation d
 
 This script is configured for 10 classes including one for background images.
 
-Edit the hp_param_training.py script if using your own dataset before training, providing a data path, 
-logging path, model save path and edit the steps per epoch.
+To train a model with your own dataset edit the hp_param_training.py script by providing a data path, 
+logging path, model save path and edit the steps per epoch based on the size of the dataset.
 
 Tensorboard command: tensorboard --logdir hparam_tuning --reload_multifile=true
 
