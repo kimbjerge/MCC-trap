@@ -26,7 +26,7 @@ The following dependencies must be installed.
 | Scikit learn | tbd      |
 
 #### Using Anaconda: ####
-1. Install the dependencies and create the environment using the provided OS specific environment file with the command "conda create --name myEnv --file ENV_FILE.txt
+1. Install the dependencies and create the environment using the provided OS specific environment file with the command "conda create --name myEnv --file ENV_FILE.txt"
 2. Activate the enviorement using the command "activate myEnv"
 
 #### Start the program ####
