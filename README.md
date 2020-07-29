@@ -44,9 +44,6 @@ logging path, model save path and edit the steps per epoch.
 
 Tensorboard command: tensorboard --logdir hparam_tuning --reload_multifile=true
 
-## Contribution guidelines ##
-Comming soon.
-
 ## Who do I talk to? ##
 Jakob Bonde Nielsen or Kim Bjerge
 
