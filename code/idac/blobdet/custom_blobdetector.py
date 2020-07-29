@@ -35,7 +35,7 @@ class CustomBlobDetector(Blobdetector):
         startingid = startingid
         # Init counters for counting number of images
         count = 0
-        contours, hierarchy = cv2.findContours(255 - binary.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        _, contours, _= cv2.findContours(255 - binary.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         for cnt in contours:
             x, y, w, h = cv2.boundingRect(cnt)
             crop_img = original[y:y + h, x:x + w]
