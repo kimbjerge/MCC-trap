@@ -29,7 +29,7 @@ The following dependencies must be installed.
 3. Install opencv with the command "pip install opencv-contrib-python"
 
 #### Start the program ####
-Start the program by running the file idac_main.py with the command "python idac_main.py"
+Start the programs by running the files MCC_gui.py or MCC_algorithm.py with the command "python MCC_gui.py"
 
 ## How do I train new models? ##
 New models can be trained using the provided hp_param_training jupyter notebook script.
