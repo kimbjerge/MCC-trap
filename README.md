@@ -22,11 +22,12 @@ The following dependencies must be installed.
 | Pillow       | tbd      |
 | PyQt5        | tbd      |
 | OpenCV       | tbd      |
+| Seaborn      | tbd      |
+| Scikit learn | tbd      |
 
-#### Using Anaconda on Windows: ####
-1. Install the dependencies and create the enviorement using the provided "env.txt" with the command "conda create --name myEnv --file env.txt"
+#### Using Anaconda: ####
+1. Install the dependencies and create the enviorement using the provided OS specific environment file with the command "conda create --name myEnv --file ENV_FILE.txt
 2. Activate the enviorement using the command "activate myEnv"
-3. Install opencv with the command "pip install opencv-contrib-python"
 
 #### Start the program ####
 Start the programs by running the files MCC_gui.py or MCC_algorithm.py in the code directory with the command "python MCC_gui.py" or "python MCC_algorithm.py".
