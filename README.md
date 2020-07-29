@@ -33,11 +33,14 @@ The following dependencies must be installed.
 Start the programs by running the files MCC_gui.py or MCC_algorithm.py in the code directory with the command "python MCC_gui.py" or "python MCC_algorithm.py".
 
 ## How do I train new models? ##
-New models can be trained using the provided hp_param_training jupyter notebook script.
+New models can be trained using the provided code/hp_param_training.py script.
 
-Edit the script before training, providing a data path, logging path, model save path and edit the steps per epoch.
+This script is configured for 10 classes including one for background images.
+Extract the 10classes_mixed.zip file before start training.
 
-Tensorboard command: tensorboard --logdir "LOG_PATH_HERE" --reload_multifile=true
+Edit the hp_param_training.py script before training, providing a data path, logging path, model save path and edit the steps per epoch.
+
+Tensorboard command: tensorboard --logdir hparam_tuning --reload_multifile=true
 
 ## Contribution guidelines ##
 Comming soon.
