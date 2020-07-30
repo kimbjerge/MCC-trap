@@ -35,6 +35,7 @@ Start the programs by running the files MCC_gui.py or MCC_algorithm.py in the co
 #### Results & output ####
 The algorithm outputs the results in JSON and CSV files. 
 The files contain the following information:
+
 | Property | Description | Example |
 | id   | The id of the track. | 0 |
 | startdate | The date when the track was first registered. YYYY:MM:DD | 20190901 |
