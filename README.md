@@ -32,6 +32,23 @@ The following dependencies must be installed.
 #### Start the program ####
 Start the programs by running the files MCC_gui.py or MCC_algorithm.py in the code directory with the command "python MCC_gui.py" or "python MCC_algorithm.py".
 
+#### Results & output ####
+The algorithm outputs the results in JSON and CSV files. 
+The files contain the following information:
+| Property | Description | Example |
+| id   | The id of the track. | 0 |
+| startdate | The date when the track was first registered. YYYY:MM:DD | 20190901 |
+| starttime  | The time of the day the track was first registered. HH:MM:SS | 03:32:12 |
+| endtime | The time the track was last registered. HH:MM:SS | 03:33:08 |
+| duration | The duration of the track. HH | 56.00 |
+| class | The class predicted by the algorithm. | noctua_pronuba |
+| counts | The number of times the given track has been present in a frame | 28.0 |
+| confidence | The algorithms confidence in the classification. The confidence is based on the mutual classifications of the track and is calculated as the ratio between the most classified class and the total number of classifications. | 6/10 = 60.00 |
+| size | The average number of blob pixels in one track. | 73563.79 |
+| distance | The euclidean distance in pixels the centerpoint of the blobs have moved throughout a track. | 65 | 
+
+
+
 ## How do I train new models? ##
 New models can be trained using the provided python script: code/hp_param_training.py 
 
