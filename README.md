@@ -37,7 +37,8 @@ The algorithm outputs the results in JSON and CSV files.
 The files contain the following information:
 
 | Property | Description | Example |
-| id   | The id of the track. | 0 |
+|--------------|----------|----------|
+| id | The id of the track. | 0 |
 | startdate | The date when the track was first registered. YYYY:MM:DD | 20190901 |
 | starttime  | The time of the day the track was first registered. HH:MM:SS | 03:32:12 |
 | endtime | The time the track was last registered. HH:MM:SS | 03:33:08 |
