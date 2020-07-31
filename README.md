@@ -33,8 +33,8 @@ The following dependencies must be installed.
 Start the programs by running the files MCC_gui.py or MCC_algorithm.py in the code directory with the command "python MCC_gui.py" or "python MCC_algorithm.py".
 
 #### Results & output ####
-The algorithm outputs the results in JSON and CSV files with date, counts for each species (class) and total number of counts.
-These statistics files are by default named statistics.json and statistics.csv. The track files are by default named <DirectoryName>.json and <DirectoryName>.csv
+The algorithm outputs the results in JSON and CSV files with date and counts for each species (class).
+These statistic files are by default named statistics.json and statistics.csv. The track files are by default named <DirectoryName>.json and <DirectoryName>.csv
 The track files contain the following information:
 
 | Property | Description | Example |
