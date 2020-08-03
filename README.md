@@ -43,7 +43,7 @@ The track files contain the following information:
 | startdate | The date when the track was first registered. YYYY:MM:DD | 20190901 |
 | starttime  | The time of the day the track was first registered. HH:MM:SS | 03:32:12 |
 | endtime | The time the track was last registered. HH:MM:SS | 03:33:08 |
-| duration | The duration of the track. HH | 56.00 |
+| duration | The duration of the track. SS | 56.00 |
 | class | The class predicted by the algorithm. | noctua_pronuba |
 | counts | The number of times the given track has been present in a frame | 28.0 |
 | confidence | The algorithms confidence in the classification. The confidence is based on the mutual classifications of the track and is calculated as the ratio between the most classified class and the total number of classifications. | 6/10 = 60.00 |
