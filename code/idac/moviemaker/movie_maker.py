@@ -20,9 +20,15 @@ class MovieMaker:
 
     def getImDateTime(self, imname):
         
-        ind = imname.index('-')
-        imdate = imname[ind+1:ind+9]
-        imtime = imname[ind+9:ind+15]
+        #Find date and time in filename
+        if imname[14] == '-': # YYYYMMDDHHMMSS        
+            imdate = imname[0:8]
+            imtime = imname[8:14]
+        else: # SSS-YYYYMMDDHHMMSS
+            ind = imname.index('-')
+            imdate = imname[ind+1:ind+9]
+            imtime = imname[ind+9:ind+15]
+            
         imtime = ':'.join(imtime[i:i+2] for i in range(0, len(imtime), 2))
         
         return imdate, imtime

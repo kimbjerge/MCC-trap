@@ -18,10 +18,16 @@ class Stats:
 
     def update_stats(self, oois, imname):
         print(imname)
-        #Find info in filename
-        ind = imname.index('-')
-        startdate = imname[ind+1:ind+9]
-        time = imname[ind+9:ind+15]
+        
+        #Find date and time in filename
+        if imname[14] == '-': # YYYYMMDDHHMMSS
+            startdate = imname[0:8]
+            time = imname[8:14]
+        else: # SSS-YYYYMMDDHHMMSS
+            ind = imname.index('-')
+            startdate = imname[ind+1:ind+9]
+            time = imname[ind+9:ind+15]
+
         time = ':'.join(time[i:i+2] for i in range(0, len(time), 2))
 
         for obj in oois:
