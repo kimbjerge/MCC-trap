@@ -5,7 +5,7 @@ This repository contains all the necessary code and documentation of the algorit
 It contains instructions and code for both training and data-processing.
 
 Paper:
-https://www.biorxiv.org/content/10.1101/2020.03.18.996447v1
+https://www.biorxiv.org/content/10.1101/2020.03.18.996447v2
 
 
 ## How do I get started? ##
