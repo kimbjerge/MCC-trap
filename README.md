@@ -33,7 +33,27 @@ Start the programs by running the files MCC_gui.py or MCC_algorithm.py in the co
 
 #### Results & output ####
 The algorithm outputs the results in JSON and CSV files with date and counts for each species (class).
-These statistic files are by default named statistics.json and statistics.csv. The track files are by default named <DirectoryName>.json and <DirectoryName>.csv
+These statistic files are by default named statistics.json and statistics.csv. 
+
+The statistics.csv file contains information on date and the counted number of moths and insects in the below listed order of categories:
+
+date, 
+agrotis_puta, 
+amphipyra_pyramidea, 
+autographa_gamma, 
+caradrinina, 
+mythimna_pallens, 
+noctua_fimbriata, 
+noctua_pronuba, 
+xestia_c-nigrum, 
+vespula_vulgais, 
+background, 
+unknown, 
+total
+
+Here backgound is the number of blobs the algorithm has identified as part of the background and unknown is number of unknown insects.
+
+Track files are by default named <DirectoryName>.json and <DirectoryName>.csv
 The track files contain the following information:
 
 | Property | Description | Example |
