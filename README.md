@@ -51,7 +51,8 @@ background,
 unknown, 
 total
 
-Here backgound is the number of blobs the algorithm has identified as part of the background and unknown is number of unknown insects.
+Here backgound is the number of blobs the algorithm has identified as part of the background image and unknown is number of unknown insects.
+Total contains the total sum of detections in all categories.
 
 Track files are by default named <DirectoryName>.json and <DirectoryName>.csv
 The track files contain the following information:
