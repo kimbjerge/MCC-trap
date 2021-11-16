@@ -11,6 +11,7 @@ class OtsuBlobDetector(Blobdetector):
         self.config = config['blobdetector']
         background = cv2.imread(self.config['backgroundpath'])
         self.background = cv2.cvtColor(background, cv2.COLOR_BGR2GRAY)
+        self.usebackground = self.config["usebackground"]
         self.minarea = self.config["minarea"]
         self.maxarea = self.config["maxarea"]
         self.blur_kernel = self.config["otsu"]["blur_kernel"]
@@ -21,7 +22,9 @@ class OtsuBlobDetector(Blobdetector):
         original = img.copy()
         font = cv2.FONT_HERSHEY_SIMPLEX
         gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-        blur = cv2.GaussianBlur(gray-self.background, (self.blur_kernel, self.blur_kernel), self.blur_const)
+        if self.usebackground:
+            gray = gray - self.background
+        blur = cv2.GaussianBlur(gray, (self.blur_kernel, self.blur_kernel), self.blur_const)
         th, image_otsu = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         kernel = np.ones((self.kernel_otsu, self.kernel_otsu), np.uint8)
         gray = cv2.morphologyEx(image_otsu, cv2.MORPH_CLOSE, kernel)

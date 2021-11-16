@@ -40,7 +40,8 @@
       },           
       "minarea": 12000,
       "maxarea": 250000,
-      "backgroundpath": "../config/sample_background.jpg"
+      "backgroundpath": "../config/sample_background.jpg",
+      "usebackground": true
    },
 
    "imagemod":{

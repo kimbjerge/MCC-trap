@@ -11,17 +11,18 @@ class SimpleThresBlobDetector(Blobdetector):
         self.config = config['blobdetector']
         background = cv2.imread(self.config['backgroundpath'])
         self.background = cv2.cvtColor(background, cv2.COLOR_BGR2GRAY)
+        self.usebackground = self.config["usebackground"]
         self.kernel_fast = self.config["simple"]["kernel"]
         self.thresh = self.config["simple"]["thresh"]
         self.minarea = self.config["minarea"]
         self.maxarea = self.config["maxarea"]
 
-
     def findboxes(self, img, startingid):
         original = img.copy()
         font = cv2.FONT_HERSHEY_SIMPLEX
         gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-        gray = gray - self.background
+        if self.usebackground:
+            gray = gray - self.background
         gray[gray > self.thresh] = 255
         gray[gray <= self.thresh] = 0
         kernel = np.ones((self.kernel_fast*4, self.kernel_fast*4), np.uint8) #KBE improved ???

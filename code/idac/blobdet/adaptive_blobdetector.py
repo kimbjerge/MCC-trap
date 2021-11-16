@@ -12,6 +12,7 @@ class AdaptiveBlobDetector(Blobdetector):
         self.config = config['blobdetector']
         background = cv2.imread(self.config['backgroundpath'])
         self.background = cv2.cvtColor(background, cv2.COLOR_BGR2GRAY)
+        self.usebackground = self.config["usebackground"]
         self.minarea = self.config["minarea"]
         self.maxarea = self.config["maxarea"]
         self.adapsize = self.config["adaptive"]["adapsize"]
@@ -22,7 +23,12 @@ class AdaptiveBlobDetector(Blobdetector):
     def findboxes(self, img, startingid):
         font = cv2.FONT_HERSHEY_SIMPLEX
         gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-        gray = cv2.medianBlur(gray - self.background, self.medianblur)
+        
+        if self.usebackground: # Substract background image
+            gray = gray - self.background
+            
+        gray = cv2.medianBlur(gray, self.medianblur)
+            
         time1 = time.time()
         gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
                                      cv2.THRESH_BINARY, self.adapsize, self.adapconst)
